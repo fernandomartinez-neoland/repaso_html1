@@ -32,7 +32,7 @@ a:hover {
   max-width: 80px;
 }
 
-.horientacion {
+.orientacion {
   display: flex;
   justify-content: space-around;
   gap: 20px;
