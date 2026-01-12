@@ -95,9 +95,11 @@ a:hover {
 }
 
 .card {
+  flex: 0 0 calc(25% - 55px);
+
   border-radius: var(--border-radius);
-  max-width: 200px;
-  margin: 15px;
+  /* max-width: 200px; */
+  /* margin: 15px; */
   padding: 15px;
   background-color: color-mix(in srgb, rgb(var(--primary-color)), black 50%);
   img {
@@ -108,7 +110,10 @@ a:hover {
 }
 
 .projects-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* display: grid;
   /* 'auto-fill' crea tantas columnas como quepan */
   /* 'minmax' asegura que no sean menores a 200px ni mayores a 1fr */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
