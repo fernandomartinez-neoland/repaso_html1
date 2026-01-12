@@ -93,3 +93,34 @@ a:hover {
   font-weight: bold;
   text-align: center;
 }
+
+.card {
+  border-radius: var(--border-radius);
+  max-width: 200px;
+  margin: 15px;
+  padding: 15px;
+  background-color: color-mix(in srgb, rgb(var(--primary-color)), black 50%);
+  img {
+    align-self: center;
+    max-width: 150px;
+    border-radius: var(--border-radius);
+  }
+}
+
+.projects-grid {
+  display: grid;
+  /* 'auto-fill' crea tantas columnas como quepan */
+  /* 'minmax' asegura que no sean menores a 200px ni mayores a 1fr */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* Espacio entre tarjetas */
+  margin: 0 15px;
+  justify-items: center; /* Centra las tarjetas si sobra espacio */
+  padding: 20px;
+}
+
+/* Ajuste opcional para tus tarjetas */
+.card {
+  /* Quitamos el margin fijo para que el gap del grid maneje el espacio */
+  margin: 0;
+  width: 100%; /* Que ocupen el ancho de su celda de grid */
+}
