@@ -8,16 +8,16 @@
   </head>
   <body>
     <!-- cabecera -->
-    <header class="horientacion">
+    <header class="orientacion container">
       <img
         class="logo_header"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png"
         alt="lego"
       />
       <nav>
-        <ul class="horientacion menu">
+        <ul class="orientacion menu">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Skills</a></li>
           <li><a href="#">Contact</a></li>
@@ -27,16 +27,39 @@
     </header>
 
     <!-- main -->
-    <main>
+    <main class="container">
+      <!-- hero -->
       <section id="home" class="home orientacion">
-        <hero class="hero">
+        <div class="hero">
           <h1>Home</h1>
           <button class="hero header_login_button">Button</button>
-        </hero>
+        </div>
       </section>
-      <section>about</section>
+
+      <!-- about -->
+      <section id="about" class="orientacion">
+        <div>
+          <div class="img_center">
+            <h2>About</h2>
+            <img
+              src="assets/img/Joe_Biden_presidential_portrait.jpg.webp"
+              alt=""
+              class="about_img"
+            />
+          </div>
+          <h2 class="about_name">Fer</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
+            voluptatem natus ipsam placeat accusamus fugiat nemo ipsum, veniam
+            unde
+          </p>
+        </div>
+      </section>
+
+      <!-- projects -->
       <section>projects</section>
-      <section>skills</section>
+
+      <!-- contact -->
       <section>contact</section>
     </main>
 
