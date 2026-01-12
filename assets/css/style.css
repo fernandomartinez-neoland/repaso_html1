@@ -1,21 +1,31 @@
 :root {
   --primary-color: 254, 77, 123;
+  --secondary-color: 5, 100, 1;
+  --border-radius: 50px;
 }
 body {
   font-family: monospace;
   background-color: rgba(var(--primary-color), 0.3);
 }
 header {
-  padding: 15px;
-  border-radius: 50px;
+  padding: 25px;
+  border-radius: var(--border-radius);
   max-height: 150px;
   background-color: color-mix(in srgb, rgb(var(--primary-color)), white 50%);
 
   /* responsive */
-  @media (max-width: 750px) {
+  @media (max-width: 480px) {
     max-height: 350px;
     justify-content: left;
   }
+}
+
+a {
+  text-decoration: none;
+  color: rgba(var(--secondary-color), 1);
+}
+a:hover {
+  color: color-mix(in srgb, rgba(var(--secondary-color), 1), white 50%);
 }
 
 .logo_header {
@@ -28,12 +38,37 @@ header {
   gap: 20px;
   align-items: center;
   /* responsive */
-  @media (max-width: 750px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
 .menu {
+  li {
+    font-weight: bold;
+  }
   list-style: none;
+}
+
+.header_login_button {
+  border-radius: var(--border-radius);
+  background-color: color-mix(in srgb, rgb(var(--secondary-color)), white 50%);
+  font-weight: 600;
+}
+
+.home {
+  background-image: url("https://wallpapercave.com/wp/wp7539210.jpg");
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  width: auto;
+  margin-top: 15px;
+  border-radius: var(--border-radius);
+}
+
+.hero {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
